@@ -2,6 +2,12 @@
 
 import { type ReactNode } from 'react'
 
-export function Web3Provider({ children }: { children: ReactNode }) {
+// Provider simplificado que funciona sin las dependencias pesadas de Wagmi
+export function Web3Provider({
+  children,
+}: {
+  children: ReactNode
+  initialState?: unknown
+}) {
   return <>{children}</>
 }
